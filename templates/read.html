@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+</head>
+<body>
+    <table border="1">
+           <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>age</th>
+           </tr>
+           
+           {% for d in pid %}
+           <tr>
+            <td>{{d[0]}}</td>
+            <td>{{d[1]}}</td>
+            <td>{{d[2]}}</td>
+            <td>{{d[3]}}</td>
+            <td>
+                <a href="/update/{{ d[0] }}">Update</a> |
+                <a href="/delete/{{ d[0] }}">Delete</a>
+            </td>
+           </tr>
+           {% endfor %}  
+    </table>
+</body>
+</html>
